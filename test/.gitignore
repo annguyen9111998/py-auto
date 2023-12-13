@@ -1,0 +1,9 @@
+# Compiled class file
+*.class
+__pycache__/
+.pytest_cache
+
+# Thumbnails
+._*
+
+
