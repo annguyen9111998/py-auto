@@ -1,0 +1,45 @@
+# Python package
+# Create and test a Python package on multiple Python versions.
+# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+
+trigger:
+- main
+
+pool:
+  vmImage: windows-2019
+strategy:
+  matrix:
+    Python37:
+      python.version: '3.7'
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '$(python.version)'
+  displayName: 'Use Python $(python.version)'
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
+
+- powershell: Set-DisplayResolution -Width 1920 -Height 1080 -Force
+  displayName: 'Update Display Resolution'
+- powershell: .\runtest.ps1 -browser $(browser) -environment $(environment) -tag $(tag)
+  displayName: 'Run Selenium Scripts'
+- task: PublishTestResults@2
+  condition: always()
+  inputs:
+    testResultsFiles: report.xml
+    searchFolder: 'D:\a\1\s\DemoQABookStore'
+  displayName: 'Publish Test Results report.xml'
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: 'D:\a\1\s\DemoQABookStore\allure_report'
+    artifact: 'Report'
+    publishLocation: 'pipeline'
+  condition: succeededOrFailed()
+  displayName: 'Publish Pipeline Artifact'
+    
+   
