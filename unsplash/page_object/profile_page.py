@@ -6,7 +6,7 @@ from core.driver.driver_utils import DriverUtils
 class ProfilePage(BasePage):
     def __init__(self):
         super().__init__()
-        self.ok_button = Element((By.ID,'closeSmallModal-ok'))
+        self.user_name = Element((By.ID,'user_username'))
     
     def delete_button(self, book_name):
         delete_button_xpath = '//span[ .=\'%s\']/ancestor::div[@role=\'row\']//span[@title=\'Delete\']' % book_name

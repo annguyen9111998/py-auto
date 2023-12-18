@@ -1,7 +1,7 @@
 import pytest
 from data_object.account import Account
 from data_object.book import Book
-from page_object.book_store_page import BookStorePage
+from unsplash.page_object.main_page import BookStorePage
 from page_object.login_page import LoginPage
 from page_object.profile_page import ProfilePage
 from page_object.book_detail_page import BookDetailPage

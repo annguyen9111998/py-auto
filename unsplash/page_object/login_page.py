@@ -6,8 +6,8 @@ class LoginPage(BasePage):
     def __init__(self):
         super().__init__()
         self._login_button = Element((By.ID,'login'))
-        self._username_textbox = Element((By.ID,'userName'))
-        self._password_textbox = Element((By.ID, 'password'))
+        self._email_textbox = Element((By.ID,'user_email'))
+        self._password_textbox = Element((By.ID, 'user_password'))
         self._error_message = Element((By.ID, 'name'))
     
     def login(self, account):

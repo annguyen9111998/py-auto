@@ -1,7 +1,7 @@
 import pytest
 import time 
 from core.element.element import Element
-from page_object.book_store_page import BookStorePage
+from unsplash.page_object.main_page import BookStorePage
 from page_object.login_page import LoginPage
 from data_object.account import Account
 import allure
