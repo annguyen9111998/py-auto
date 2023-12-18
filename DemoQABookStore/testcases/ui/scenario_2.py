@@ -20,13 +20,13 @@ class TestScenario1():
     def test_search_book_with_ui(self, account, book):    
         Report.report_step('Go to Log in page')
         book_store_page =  BookStorePage()
-        # book_store_page.go_to_login_page()
+        book_store_page.go_to_login_page()
         
-        # Report.report_step('Log in to the application')
-        # login_page = LoginPage()
-        # login_page.login(account)
+        Report.report_step('Log in to the application')
+        login_page = LoginPage()
+        login_page.login(account)
         
-        # Report.report_step('using search function')
-        # book_store_page.wait_for_page_load()
+        Report.report_step('using search function')
+        book_store_page.wait_for_page_load()
         book_store_page.using_search_book_function(book.book_name)
         book_store_page.verify_book(book.book_name)

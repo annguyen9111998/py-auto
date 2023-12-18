@@ -27,9 +27,10 @@ class TestScenario1():
         login_page.login(account)
         
         Report.report_step('add book by name')
+        book_detail_page = BookDetailPage()
         book_store_page.wait_for_page_load()
         book_store_page.click_book(book.book_name)
-        book_store_page.add_book()
+        book_detail_page.add_book()
         
         Report.report_step('Go to profile page')
         book_store_page.go_to_profile_page()

@@ -10,6 +10,9 @@ class Element():
         self._driver = DriverManager.driver.get_webdriver()
         self._by = by
     
+    def find_elements(self):
+        self.find_elements
+        
     def wait_for_presence(self, timeout=SELENPY_DEFAULT_TIMEOUT):
         self._element = WebDriverWait(self._driver, timeout).until(EC.presence_of_element_located((self._by[0] , self._by[1])))
 
