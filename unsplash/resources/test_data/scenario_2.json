@@ -1,9 +1,27 @@
 {
     "valid":[
         {
-            "username":"annguyen911",
-            "password":"Bench@123",
-            "user_id":"7d1c8303-0a2e-4344-8b50-ae439b9c95e4"
+            "email":"annguyenq@nashtechglobal.com",
+            "password":"forpasandlevelup",
+            "authorization_code":"ICZ2545-R0b3u9rOG6ETKrigZ8QvEODC9uVMo5kS7Q8",
+            "access_token":"P_zWeGKIyPHTvpXOkXnqlkTl6aLz-fxSsju3JFoXFT0",
+            "username":"test911"
+        }
+    ],
+    "invalid":[
+        {
+            "email":"annguyenq@nashtechglobal.com",
+            "password":"forpasandlevelup",
+            "authorization_code":"IFKIJPtqmqLqQ6FlTFChtlzB4e3qpLHOvrqzI6h0vGQ",
+            "access_token":"u1b1OJhNR2YfT_JRN7x7wP9CCCMoKoNczKHHMRikuLA",
+            "username":"test911"
+        },
+        {
+            "email":"annguyenq@nashtechglobal.com",
+            "password":"forpasandlevelup",
+            "authorization_code":"IFKIJPtqmqLqQ6FlTFChtlzB4e3qpLHOvrqzI6h0vGQ",
+            "access_token":"u1b1OJhNR2YfT_JRN7x7wP9CCCMoKoNczKHHMRikuLA",
+            "username":"test911"
         }
     ]
 }

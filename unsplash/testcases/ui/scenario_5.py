@@ -11,10 +11,10 @@ from core.driver.driver_utils import DriverUtils
 import allure
 
 @allure.parent_suite('UI Test')
-@allure.suite('Test Scenario 3')
+@allure.suite('Test Scenario 5')
 class TestDeleteBook():
-    @allure.title("List of liked photos")
-    @pytest.mark.parametrize("account", Account.get_list_account_from_json('resources/test_data/scenario_3.json','valid'))
+    @allure.title("Download photo successfully")
+    @pytest.mark.parametrize("account", Account.get_list_account_from_json('resources/test_data/scenario_5.json','valid'))
     @pytest.mark.parametrize("book", Book.get_list_book_from_json('resources/test_data/book.json','valid'))
     def test_delete_book_with_ui(self, account, book):
         Report.report_step('Add a book to collection with API')
