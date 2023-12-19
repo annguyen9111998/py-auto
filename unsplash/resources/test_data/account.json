@@ -1,21 +1,24 @@
 {
     "valid":[
         {
-            "username":"anhtien12345",
-            "password":"Abcd1234@",
-            "user_id":"9d4da11c-f6f5-4de6-86ef-10dd0151fdfc"
+            "email":"annguyenq@nashtechglobal.com",
+            "password":"forpasandlevelup",
+            "authorization_code":"IFKIJPtqmqLqQ6FlTFChtlzB4e3qpLHOvrqzI6h0vGQ",
+            "access_token":"u1b1OJhNR2YfT_JRN7x7wP9CCCMoKoNczKHHMRikuLA"
         }
     ],
     "invalid":[
         {
-            "username":"anhtien12345678",
-            "password":"Abcd1234@",
-            "user_id":"9d4da11c-f6f5-4de6-86ef-10dd0151fdfc"
+            "email":"annguyenq@nashtechglobal.com",
+            "password":"forpasandlevelup",
+            "authorization_code":"IFKIJPtqmqLqQ6FlTFChtlzB4e3qpLHOvrqzI6h0vGQ",
+            "access_token":"u1b1OJhNR2YfT_JRN7x7wP9CCCMoKoNczKHHMRikuLA"
         },
         {
-            "username":"anhtien12345",
-            "password":"Abcd1234",
-            "user_id":"9d4da11c-f6f5-4de6-86ef-10dd0151fdfc"
+            "email":"annguyenq@nashtechglobal.com",
+            "password":"forpasandlevelup",
+            "authorization_code":"IFKIJPtqmqLqQ6FlTFChtlzB4e3qpLHOvrqzI6h0vGQ",
+            "access_token":"u1b1OJhNR2YfT_JRN7x7wP9CCCMoKoNczKHHMRikuLA"
         }
     ]
 }

@@ -1,12 +1,12 @@
 {
-    "dev":"https://www.nopcommerce.com/en",
+    "dev":"https://unsplash.com/",
     "qa":{
-        "baseUrl": "https://demoqa.com/books",
-        "apiBaseUrl": "https://demoqa.com"
+        "baseUrl": "https://unsplash.com/",
+        "apiBaseUrl": "https://unsplash.com/"
     },
     "uat":{
-        "baseUrl": "https://demoqa.com/books",
-        "apiBaseUrl": "https://demoqa.com"
+        "baseUrl": "https://unsplash.com/",
+        "apiBaseUrl": "https://unsplash.com/"
     },
-    "prod":"https://www.nopcommerce.com/en"
+    "prod":"https://unsplash.com/"
 }
