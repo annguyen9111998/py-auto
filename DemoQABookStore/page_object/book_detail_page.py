@@ -1,3 +1,4 @@
+
 from core.element.element import Element
 from selenium.webdriver.common.by import By
 from core.driver.driver_utils import DriverUtils
@@ -11,5 +12,9 @@ class BookDetailPage(BasePage):
     def add_book(self):
         self._add_book_locator.click()
         DriverUtils.accept_alert()
+    
+    def verify_js_alert(self,alert_message):
+        actual_message = DriverUtils.get_alert_text()
+        assert alert_message == actual_message
 
     

@@ -18,3 +18,7 @@ class DriverManager():
     @classmethod
     def quit_driver(cls):
         cls.driver.quit()
+        #static and variable ? 
+        #cls and self ,static and dynamic
+        #method must new.method
+        #write a sample class that got static and dynamic method and how to call them 

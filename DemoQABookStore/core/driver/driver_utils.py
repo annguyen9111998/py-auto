@@ -45,6 +45,12 @@ class DriverUtils():
         alert.accept()
 
     @classmethod
+    def get_alert_text(cls):
+        cls.wait_for_alert()
+        alert = cls.get_driver().switch_to.alert
+        alert.getText()
+
+    @classmethod
     def save_screenshot(cls, file):
         """
             :Usage:
@@ -55,4 +61,8 @@ class DriverUtils():
     @classmethod
     def save_screenshot_as_png(cls):
         cls.get_driver().get_screenshot_as_png()
+        
+    @classmethod
+    def find_elements(cls):
+        cls.get_driver().find_elements()
 

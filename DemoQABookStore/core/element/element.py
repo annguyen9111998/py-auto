@@ -3,6 +3,7 @@ from core.const.constants import SELENPY_DEFAULT_TIMEOUT
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from core.utilities.wait_utils import wait_until
+from core.driver.driver_utils import DriverUtils
 class Element():
 
     def __init__(self, by):
@@ -10,8 +11,8 @@ class Element():
         self._driver = DriverManager.driver.get_webdriver()
         self._by = by
     
-    def find_elements(self):
-        self.find_elements
+    def find_elements(self,locator):
+        DriverUtils.find_elements(locator)
         
     def wait_for_presence(self, timeout=SELENPY_DEFAULT_TIMEOUT):
         self._element = WebDriverWait(self._driver, timeout).until(EC.presence_of_element_located((self._by[0] , self._by[1])))

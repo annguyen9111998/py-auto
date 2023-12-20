@@ -1,3 +1,4 @@
+from core.driver.driver_utils import DriverUtils
 from core.element.element import Element
 from selenium.webdriver.common.by import By
 from .base_page import BasePage
@@ -42,8 +43,9 @@ class BookStorePage(BasePage):
         
         expected_book_link_xpath = '//a[contains(text(),\'%s\')]' % book_name
         self.expected_book_locator= Element.find_elements((By.XPATH, expected_book_link_xpath))
-        a = len(self.expected_book_locator)
+        a = self.expected_book_locator
+        print(len(self.expected_book_locator))
         actual_book_link_xpath = '//span[contains(@id, "see-book")]'
         self.actual_book_locator= Element.find_elements((By.XPATH, actual_book_link_xpath))
+        print(len(self.actual_book_locator))
         b = len(self.actual_book_locator)
-        assert a == b

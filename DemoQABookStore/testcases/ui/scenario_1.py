@@ -32,6 +32,9 @@ class TestScenario1():
         book_store_page.click_book(book.book_name)
         book_detail_page.add_book()
         
+        Report.report_step('assert the JS alert')
+        book_detail_page.verify_js_alert("Book added to your collection.")
+        
         Report.report_step('Go to profile page')
         book_store_page.go_to_profile_page()
         
