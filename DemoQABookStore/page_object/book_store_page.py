@@ -42,10 +42,12 @@ class BookStorePage(BasePage):
         # assert a == b
         
         expected_book_link_xpath = '//a[contains(text(),\'%s\')]' % book_name
-        self.expected_book_locator= Element.find_elements((By.XPATH, expected_book_link_xpath))
-        a = self.expected_book_locator
-        print(len(self.expected_book_locator))
+        self.expected_book_locator= Element((By.XPATH, expected_book_link_xpath))
+        a=self.expected_book_locator.find_elements()
+        print (a)
         actual_book_link_xpath = '//span[contains(@id, "see-book")]'
-        self.actual_book_locator= Element.find_elements((By.XPATH, actual_book_link_xpath))
-        print(len(self.actual_book_locator))
-        b = len(self.actual_book_locator)
+        self.actual_book_locator= Element((By.XPATH, actual_book_link_xpath))
+        b= self.actual_book_locator.find_elements()
+        print (b)
+        assert a== b
+        

@@ -9,16 +9,16 @@ from helper.api.book_helper import BookHelper
 from helper.api.account_helper import AccountHelper
 from core.report.allure_report import Report
 from core.driver.driver_utils import DriverUtils
-from page_object.sample import SamplePage
 import allure
+from page_object.sample import SamplePage
 
 @allure.parent_suite('UI Test')
-@allure.suite('Test Scenario 2')
+@allure.suite('Test Scenario 1')
 class TestScenario1():
-    @allure.title("Search book with multiple result")
-    @pytest.mark.parametrize("account", Account.get_list_account_from_json('resources/test_data/scenario_2.json','valid'))
-    @pytest.mark.parametrize("book", Book.get_list_book_from_json('resources/test_data/book_scenario_2.json','valid'))
-    def test_search_book_with_ui(self, account, book):    
+    @allure.title("Add book to your collection")
+    @pytest.mark.parametrize("account", Account.get_list_account_from_json('resources/test_data/scenario_1.json','valid'))
+    @pytest.mark.parametrize("book", Book.get_list_book_from_json('resources/test_data/book.json','valid'))
+    def test_add_book_with_ui(self, account, book):    
         Report.report_step('Go to Log in page')
         book_store_page =  BookStorePage()
         book_store_page.go_to_login_page()
@@ -27,9 +27,10 @@ class TestScenario1():
         login_page = LoginPage()
         login_page.login(account)
         
-        Report.report_step('using search function')
-        book_store_page.wait_for_page_load()
-        book_store_page.using_search_book_function(book.book_name)
-        book_store_page.verify_book(book.book_name)
-        # sample_page = SamplePage()
-        # sample_page.intention_to_fail()
+        
+        Report.report_step('test method')
+        sample_page = SamplePage()
+        sample_page.sample()
+        sample_page.sample_class_method()
+        sample_page.make_student()
+        sample_page.intention_to_fail()
